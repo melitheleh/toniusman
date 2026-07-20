@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
       duration: 700,
       easing: 'ease-out-cubic',
       once: true,
-      offset: 80
+      offset: 80,
+      disable: function () { return window.innerWidth < 992; }
     });
   }
 
