@@ -2,7 +2,7 @@
    Toni Usman / Toni Usman Produksjoner — wireframe/mockup CSS
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=Permanent+Marker&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap');
 
 :root{
   --bg: #0f0e0d;
@@ -13,7 +13,7 @@
   --text-muted: #b7ada0;
   --accent: #c9a227;      /* Toni — gull */
   --accent-soft: rgba(201,162,39,.16);
-  --maxw: 1180px;
+  --maxw: 1280px;
   --radius: 2px;
 }
 
@@ -60,7 +60,7 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 .section{ padding: 84px 0; }
 .section.tight{ padding: 56px 0; }
-.section-head{ max-width:720px; margin-bottom:40px; }
+.section-head{ max-width:960px; margin-bottom:40px; }
 .section-head p{ color:var(--text-muted); }
 .muted{ color:var(--text-muted); }
 
@@ -81,62 +81,7 @@ ul{ margin:0; padding:0; list-style:none; }
 .btn.solid:hover{ opacity:.85; }
 .btn-row{ display:flex; gap:16px; flex-wrap:wrap; }
 
-/* ---------- Header / Nav ---------- */
-.site-header{
-  position:sticky; top:0; z-index:50;
-  background:rgba(15,14,13,.92);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--border);
-}
-.header-inner{
-  max-width:var(--maxw); margin:0 auto; padding:0 24px;
-  display:flex; align-items:center; justify-content:space-between;
-  height:76px;
-}
-.brand{
-  font-family:'Playfair Display', serif;
-  font-size:1.3rem; font-weight:700; color:var(--text);
-  letter-spacing:.02em;
-}
-.brand:hover{ text-decoration:none; color:var(--accent); }
-.brand .tag{
-  display:block; font-family:'Inter',sans-serif; font-size:.62rem;
-  letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:600;
-}
-
-.main-nav > ul{ display:flex; align-items:center; gap:30px; }
-.main-nav a{
-  color:var(--text); font-size:.83rem; letter-spacing:.03em;
-  text-transform:uppercase; font-weight:500;
-}
-.main-nav > ul > li > a{ padding:8px 0; border-bottom:1px solid transparent; }
-.main-nav > ul > li > a:hover,
-.main-nav > ul > li.active > a,
-.main-nav a.active{
-  color:var(--accent); border-color:var(--accent); text-decoration:none;
-}
-.has-dropdown{ position:relative; }
-.dropdown{
-  position:absolute; top:100%; left:50%; transform:translateX(-50%);
-  background:var(--surface); border:1px solid var(--border);
-  min-width:190px; padding:8px 0; margin-top:14px;
-  opacity:0; visibility:hidden; transform:translate(-50%,6px);
-  transition:.15s ease;
-}
-.has-dropdown:hover .dropdown,
-.has-dropdown.open .dropdown{
-  opacity:1; visibility:visible; transform:translate(-50%,0);
-}
-.dropdown li a{
-  display:block; padding:10px 20px; white-space:nowrap;
-  text-transform:none; font-size:.85rem; letter-spacing:0;
-}
-.dropdown li a:hover{ background:var(--accent-soft); text-decoration:none; }
-
-.nav-toggle{
-  display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; padding:8px;
-}
-.nav-toggle span{ width:24px; height:2px; background:var(--text); }
+/* (gammel header-CSS fjernet — navbar bruker Bootstrap) */
 
 /* ---------- Hero ---------- */
 .hero{
@@ -149,7 +94,7 @@ ul{ margin:0; padding:0; list-style:none; }
 }
 .hero-inner{ position:relative; z-index:2; padding:70px 0 60px; max-width:var(--maxw); margin:0 auto; width:100%; padding-left:24px; padding-right:24px; }
 .hero h1{ margin-bottom:.2em; }
-.hero .lede{ font-size:1.15rem; color:var(--text-muted); max-width:620px; margin-bottom:28px; }
+.hero .lede{ font-size:1.15rem; color:var(--text-muted); max-width:760px; margin-bottom:28px; }
 .hero.small{ min-height:44vh; }
 
 /* ---------- Cards / Grids ---------- */
@@ -233,19 +178,6 @@ input:focus, textarea:focus{ outline:none; border-color:var(--accent); }
 }
 
 @media (max-width: 760px){
-  .nav-toggle{ display:flex; }
-  .main-nav{
-    position:absolute; top:76px; left:0; right:0; background:var(--bg);
-    border-bottom:1px solid var(--border); display:none;
-  }
-  .main-nav.open{ display:block; }
-  .main-nav > ul{ flex-direction:column; align-items:stretch; gap:0; padding:10px 24px 20px; }
-  .main-nav > ul > li > a{ display:block; padding:14px 0; border-bottom:1px solid var(--border); }
-  .has-dropdown .dropdown{
-    position:static; transform:none; opacity:1; visibility:visible; display:none;
-    margin:0 0 6px; border:0; background:none; padding:0 0 0 14px;
-  }
-  .has-dropdown.open .dropdown{ display:block; }
   .grid.cols-3, .grid.cols-2{ grid-template-columns:1fr; }
   .gallery-grid{ grid-template-columns:repeat(2,1fr); }
   .cta-banner{ padding:32px; }
@@ -377,7 +309,7 @@ input:focus, textarea:focus{ outline:none; border-color:var(--accent); }
 .page-head{ padding:76px 0 0; }
 .page-head .container{ max-width:var(--maxw); }
 .page-head h1{ margin-bottom:.15em; }
-.page-head .lede{ font-size:1.1rem; color:var(--text-muted); max-width:640px; }
+.page-head .lede{ font-size:1.1rem; color:var(--text-muted); max-width:780px; }
 .page-head .eyebrow{ animation:heroFadeUp .7s cubic-bezier(.22,1,.36,1) .05s both; }
 .page-head h1{ animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .15s both; }
 .page-head .lede{ animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .28s both; }
@@ -391,3 +323,35 @@ input:focus, textarea:focus{ outline:none; border-color:var(--accent); }
 @media (prefers-reduced-motion: reduce){
   .page-head *{ animation:none !important; }
 }
+
+
+/* ============================================================
+   Pakistansk motiv — subtil jaali-mønster, ornamenter, urdu
+   ============================================================ */
+
+/* Faint jaali (lattice) pattern over hele bakgrunnen */
+body{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cpath d='M28 0L56 28 28 56 0 28Z' fill='none' stroke='%23f4efe6' stroke-opacity='0.045'/%3E%3Cpath d='M28 14L42 28 28 42 14 28Z' fill='none' stroke='%23f4efe6' stroke-opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Ornament-divider under overskrifter (diamant-motiv) */
+.section-head h2::after,
+.page-head h1::after{
+  content:''; display:block; width:132px; height:12px; margin-top:14px;
+  background:var(--accent); opacity:.85;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 12'%3E%3Cpath d='M38 0l6 6-6 6-6-6zM84 0l6 6-6 6-6-6zM130 0l6 6-6 6-6-6z'/%3E%3Cpath d='M0 5.25h26v1.5H0zM50 5.25h26v1.5H50zM96 5.25h26v1.5H96z'/%3E%3C/svg%3E") no-repeat left center / contain;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 12'%3E%3Cpath d='M38 0l6 6-6 6-6-6zM84 0l6 6-6 6-6-6zM130 0l6 6-6 6-6-6z'/%3E%3Cpath d='M0 5.25h26v1.5H0zM50 5.25h26v1.5H50zM96 5.25h26v1.5H96z'/%3E%3C/svg%3E") no-repeat left center / contain;
+}
+
+/* Navn i urdu (nastaliq) */
+.urdu-name{
+  font-family:'Noto Nastaliq Urdu', 'Playfair Display', serif;
+  color:var(--accent); font-size:1.35rem; line-height:2;
+  display:block; margin:2px 0 6px; opacity:.92;
+  direction:rtl;
+}
+.hero .urdu-name{ animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .22s both; }
+
+/* Kort: tynn accent-linje øverst som et lite tekstil-motiv */
+.card{ border-top:2px solid var(--accent-soft); }
+.card:hover{ border-top-color:var(--accent); }

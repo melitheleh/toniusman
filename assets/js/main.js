@@ -22,12 +22,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Highlight current nav link based on resolved pathname
   var here = window.location.pathname.replace(/\/index\.html$/, '/');
+  var marked = false;
   document.querySelectorAll('.navbar .nav-link[href], .navbar .dropdown-item[href]').forEach(function (a) {
+    if (marked) { return; }
     var linkPath = a.pathname.replace(/\/index\.html$/, '/');
     if (linkPath === here) {
+      marked = true;
       var parentDropdown = a.closest('.dropdown');
       if (parentDropdown) {
-        parentDropdown.classList.add('active');
+        parentDropdown.querySelector('.nav-link').classList.add('active');
       } else {
         a.classList.add('active');
       }
