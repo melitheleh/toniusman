@@ -345,6 +345,59 @@ body{
 }
 .hero .urdu-name{ animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .22s both; }
 
+/* ---------- Moderne forside-hero (bilde + stor urdu-kalligrafi) ---------- */
+.hero-front{
+  min-height:88vh; display:flex; align-items:center; justify-content:center;
+  text-align:center; position:relative; overflow:hidden;
+}
+.hero-front::before{
+  content:''; position:absolute; inset:0; z-index:1;
+  background:linear-gradient(180deg, rgba(15,14,13,.55) 0%, rgba(15,14,13,.6) 45%, rgba(15,14,13,.94) 100%);
+}
+.hero-urdu-bg{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-54%);
+  z-index:2; direction:rtl; white-space:nowrap; pointer-events:none;
+  font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
+  font-size:clamp(5rem, 20vw, 17rem); line-height:2;
+  color:var(--accent); opacity:.14;
+  animation:heroFadeUp 1.2s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-front-inner{
+  position:relative; z-index:3; max-width:820px; padding:0 24px;
+}
+.hero-front .eyebrow{
+  font-size:.8rem; letter-spacing:.24em; margin-bottom:18px;
+  animation:heroFadeUp .7s cubic-bezier(.22,1,.36,1) .05s both;
+}
+.hero-front h1{
+  font-size:clamp(3rem, 8vw, 6rem); margin-bottom:22px;
+  animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .15s both;
+}
+.hero-front .lede{
+  font-size:1.15rem; color:#d6ccbe; max-width:600px; margin:0 auto 30px;
+  animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .28s both;
+}
+.hero-front .btn-row{
+  justify-content:center;
+  animation:heroFadeUp .8s cubic-bezier(.22,1,.36,1) .4s both;
+}
+.hero-scroll{
+  position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+  z-index:3; color:var(--text-muted); font-size:1.8rem; line-height:1;
+  text-decoration:none; animation:heroBob 2s ease-in-out infinite;
+}
+.hero-scroll:hover{ color:var(--accent); text-decoration:none; }
+@keyframes heroBob{ 0%,100%{ transform:translate(-50%,0); } 50%{ transform:translate(-50%,7px); } }
+
+@media (prefers-reduced-motion: reduce){
+  .hero-urdu-bg, .hero-front .eyebrow, .hero-front h1, .hero-front .lede,
+  .hero-front .btn-row, .hero-scroll{ animation:none !important; }
+}
+@media (max-width: 767.98px){
+  .hero-front{ min-height:80vh; }
+  .hero-urdu-bg{ font-size:34vw; }
+}
+
 /* Kort: tynn accent-linje øverst som et lite tekstil-motiv */
 .card{ border-top:2px solid var(--accent-soft); }
 .card:hover{ border-top-color:var(--accent); }
