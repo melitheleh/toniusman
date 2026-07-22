@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var marked = false;
   document.querySelectorAll('.navbar .nav-link[href], .navbar .dropdown-item[href]').forEach(function (a) {
     if (marked) { return; }
+    var rawHref = a.getAttribute('href');
+    if (!rawHref || rawHref === '#' || rawHref.charAt(0) === '#') { return; }
     var linkPath = a.pathname.replace(/\/index\.html$/, '/');
     if (linkPath === here) {
       marked = true;
@@ -37,10 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Close the mobile menu automatically once a link is tapped
+  // Close the mobile menu automatically once a real destination link is tapped.
+  // Dropdown-togglere (Media, TUP, Hjem) skal IKKE lukke menyen — de åpner undermeny.
   var collapseEl = document.querySelector('.navbar-collapse');
   if (collapseEl && window.bootstrap) {
-    collapseEl.querySelectorAll('a.nav-link, a.dropdown-item').forEach(function (link) {
+    collapseEl.querySelectorAll('a.nav-link:not(.dropdown-toggle), a.dropdown-item').forEach(function (link) {
       link.addEventListener('click', function () {
         if (collapseEl.classList.contains('show') && window.innerWidth < 992) {
           var instance = window.bootstrap.Collapse.getOrCreateInstance(collapseEl);
