@@ -22,12 +22,12 @@ body.tup{
   --accent-soft: rgba(156,43,52,.18);
 }
 
-/* Subtil radial gradient på seksjoner med --bg-alt (mørk → ~3% lysere sentrum) */
+/* Seksjoner med --bg-alt: ensfarget svart */
 [style*="var(--bg-alt)"]{
-  background:linear-gradient(180deg, #171615 0%, #0f0e0d 100%) !important;
+  background:#0f0e0d !important;
 }
 .site-footer{
-  background:linear-gradient(180deg, #171615 0%, #0f0e0d 100%);
+  background:#0f0e0d;
 }
 
 *{ box-sizing: border-box; }
