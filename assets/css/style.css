@@ -375,7 +375,7 @@ body{
   z-index:2; direction:rtl; pointer-events:none;
   width:100%; max-width:100%; text-align:center; overflow:visible;
   font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
-  font-size:min(46vh, 34vw); line-height:1;
+  font-size:min(32vh, 24vw); line-height:1;
   color:rgba(201,162,39,.08);
   animation:urduFade 1.4s ease both;
 }
@@ -426,11 +426,12 @@ body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
   border-bottom:3px solid var(--accent);
 }
 /* Seksjonen rett etter delt-hero får egen bakgrunn så den ikke smelter sammen */
-.hero-split + .section{ background:var(--bg); }
-.hero-split + .section .section-head{ text-align:center; margin-left:auto; margin-right:auto; }
-.hero-split + .section .btn-row{ justify-content:center; }
+.hero-split + .section, .section--centered{ background:var(--bg); }
+.hero-split + .section .section-head, .section--centered .section-head{ text-align:center; margin-left:auto; margin-right:auto; }
+.hero-split + .section .btn-row, .section--centered .btn-row{ justify-content:center; }
 /* sentrert ornament-divider når overskriften er sentrert */
-.hero-split + .section .section-head h2::after{ margin-left:auto; margin-right:auto; }
+.hero-split + .section .section-head h2::after,
+.section--centered .section-head h2::after{ margin-left:auto; margin-right:auto; }
 
 /* seksjon med synlig jaali-mønster */
 .patterned-section{
