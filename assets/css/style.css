@@ -22,12 +22,12 @@ body.tup{
   --accent-soft: rgba(156,43,52,.18);
 }
 
-/* Seksjoner med --bg-alt: ensfarget svart */
+/* Seksjoner med --bg-alt: ren svart */
 [style*="var(--bg-alt)"]{
-  background:#0f0e0d !important;
+  background:#000000 !important;
 }
 .site-footer{
-  background:#0f0e0d;
+  background:#000000;
 }
 
 *{ box-sizing: border-box; }
