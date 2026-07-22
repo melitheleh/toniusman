@@ -369,14 +369,15 @@ body{
   content:''; position:absolute; inset:0; z-index:1;
   background:linear-gradient(180deg, rgba(15,14,13,.5) 0%, rgba(15,14,13,.5) 55%, rgba(15,14,13,.7) 100%);
 }
+@keyframes urduFade{ from{ opacity:0; } to{ opacity:1; } }
 .hero-urdu-bg{
-  position:absolute; top:50%; left:0; right:0; transform:translateY(-46%);
+  position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
   z-index:2; direction:rtl; pointer-events:none;
   width:100%; max-width:100%; text-align:center; overflow:visible;
   font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
   font-size:min(46vh, 34vw); line-height:1;
   color:rgba(201,162,39,.08);
-  animation:heroFadeUp 1.2s cubic-bezier(.22,1,.36,1) both;
+  animation:urduFade 1.4s ease both;
 }
 body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
 .hero-front-inner{
