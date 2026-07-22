@@ -478,5 +478,5 @@ body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
   animation:none;
 }
 .hero-noimg::before{ display:none; }
-.hero-noimg .hero-urdu-bg{ color:rgba(201,162,39,.15); font-size:min(62vh, 44vw); line-height:1.6; }
+.hero-noimg .hero-urdu-bg{ color:rgba(201,162,39,.15); font-size:18vw; line-height:1.5; }
 body.tup .hero-noimg .hero-urdu-bg{ color:rgba(156,43,52,.18); }
