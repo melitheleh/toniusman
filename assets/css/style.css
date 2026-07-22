@@ -370,11 +370,11 @@ body{
   background:linear-gradient(180deg, rgba(15,14,13,.5) 0%, rgba(15,14,13,.5) 55%, rgba(15,14,13,.7) 100%);
 }
 .hero-urdu-bg{
-  position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
+  position:absolute; top:50%; left:0; right:0; transform:translateY(-46%);
   z-index:2; direction:rtl; pointer-events:none;
-  width:100%; max-width:100%; text-align:center; overflow:hidden;
+  width:100%; max-width:100%; text-align:center; overflow:visible;
   font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
-  font-size:min(58vh, 42vw); line-height:1.6;
+  font-size:min(46vh, 34vw); line-height:1;
   color:rgba(201,162,39,.08);
   animation:heroFadeUp 1.2s cubic-bezier(.22,1,.36,1) both;
 }
@@ -478,5 +478,5 @@ body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
   animation:none;
 }
 .hero-noimg::before{ display:none; }
-.hero-noimg .hero-urdu-bg{ color:rgba(201,162,39,.15); font-size:18vw; line-height:1.5; }
+.hero-noimg .hero-urdu-bg{ color:rgba(201,162,39,.15); font-size:15vw; line-height:1; }
 body.tup .hero-noimg .hero-urdu-bg{ color:rgba(156,43,52,.18); }
