@@ -24,10 +24,10 @@ body.tup{
 
 /* Subtil radial gradient på seksjoner med --bg-alt (mørk → ~3% lysere sentrum) */
 [style*="var(--bg-alt)"]{
-  background:radial-gradient(ellipse at 50% 0%, #201c15 0%, #17140f 72%) !important;
+  background:radial-gradient(ellipse at 50% 0%, #171615 0%, #0f0e0d 72%) !important;
 }
 .site-footer{
-  background:radial-gradient(ellipse at 50% 0%, #201c15 0%, #17140f 72%);
+  background:radial-gradient(ellipse at 50% 0%, #171615 0%, #0f0e0d 72%);
 }
 
 *{ box-sizing: border-box; }
@@ -169,9 +169,11 @@ input:focus, textarea:focus{ outline:none; border-color:var(--accent); }
 .site-footer{ border-top:1px solid var(--border); padding:36px 0; background:var(--bg-alt); }
 .footer-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
 .footer-inner p{ margin:0; color:var(--text-muted); font-size:.85rem; }
-.socials{ display:flex; gap:18px; }
+.socials{ display:flex; gap:18px; align-items:center; }
 .socials a{ color:var(--text-muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; }
 .socials a:hover{ color:var(--accent); }
+.socials a .bi{ color:var(--accent); font-size:1.35rem; transition:transform .2s ease, opacity .2s ease; display:inline-block; }
+.socials a:hover .bi{ transform:translateY(-2px); opacity:.85; }
 
 .draft-banner{
   background:var(--accent); color:#141210; text-align:center; font-size:.8rem;
