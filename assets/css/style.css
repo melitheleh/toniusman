@@ -355,11 +355,12 @@ body{
   background:linear-gradient(180deg, rgba(15,14,13,.55) 0%, rgba(15,14,13,.6) 45%, rgba(15,14,13,.94) 100%);
 }
 .hero-urdu-bg{
-  position:absolute; top:50%; left:50%; transform:translate(-50%,-54%);
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
   z-index:2; direction:rtl; white-space:nowrap; pointer-events:none;
+  width:100%; text-align:center;
   font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
-  font-size:clamp(5rem, 20vw, 17rem); line-height:2;
-  color:var(--accent); opacity:.14;
+  font-size:clamp(3.5rem, 11vw, 9rem); line-height:2.2;
+  color:var(--accent); opacity:.06;
   animation:heroFadeUp 1.2s cubic-bezier(.22,1,.36,1) both;
 }
 .hero-front-inner{
@@ -395,7 +396,7 @@ body{
 }
 @media (max-width: 767.98px){
   .hero-front{ min-height:80vh; }
-  .hero-urdu-bg{ font-size:34vw; }
+  .hero-urdu-bg{ font-size:24vw; opacity:.05; }
 }
 
 /* Kort: tynn accent-linje øverst som et lite tekstil-motiv */
