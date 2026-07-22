@@ -22,6 +22,14 @@ body.tup{
   --accent-soft: rgba(156,43,52,.18);
 }
 
+/* Subtil radial gradient på seksjoner med --bg-alt (mørk → ~3% lysere sentrum) */
+[style*="var(--bg-alt)"]{
+  background:radial-gradient(ellipse at 50% 0%, #201c15 0%, #17140f 72%) !important;
+}
+.site-footer{
+  background:radial-gradient(ellipse at 50% 0%, #201c15 0%, #17140f 72%);
+}
+
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
 body{
