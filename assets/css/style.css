@@ -24,10 +24,10 @@ body.tup{
 
 /* Subtil radial gradient på seksjoner med --bg-alt (mørk → ~3% lysere sentrum) */
 [style*="var(--bg-alt)"]{
-  background:radial-gradient(ellipse at 50% 50%, #1d1914 0%, #0f0e0d 72%) !important;
+  background:linear-gradient(180deg, #171615 0%, #0f0e0d 100%) !important;
 }
 .site-footer{
-  background:radial-gradient(ellipse at 50% 50%, #1d1914 0%, #0f0e0d 72%);
+  background:linear-gradient(180deg, #171615 0%, #0f0e0d 100%);
 }
 
 *{ box-sizing: border-box; }
