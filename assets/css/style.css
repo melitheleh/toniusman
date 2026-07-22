@@ -22,8 +22,9 @@ body.tup{
   --accent-soft: rgba(156,43,52,.18);
 }
 
-/* Seksjoner med --bg-alt: ren svart */
-[style*="var(--bg-alt)"]{
+/* Seksjoner med --bg-alt eller --bg: ren svart */
+[style*="var(--bg-alt)"],
+[style*="var(--bg)"]{
   background:#000000 !important;
 }
 .site-footer{
