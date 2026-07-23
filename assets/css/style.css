@@ -385,9 +385,9 @@ body{
   position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
   z-index:2; direction:rtl; pointer-events:none;
   width:100%; max-width:100%; text-align:center; overflow:visible;
-  font-family:'Noto Naskh Arabic', serif; font-weight:700;
-  font-size:min(32vh, 24vw); line-height:1;
-  color:rgba(201,162,39,.06);
+  font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
+  font-size:min(30vh, 22vw); line-height:1.2;
+  color:rgba(201,162,39,.07);
   animation:urduFade 1.4s ease both;
 }
 body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
@@ -463,9 +463,9 @@ body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
   position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
   z-index:0; direction:rtl; pointer-events:none; white-space:nowrap;
   text-align:center; width:100%;
-  font-family:'Noto Naskh Arabic', serif; font-weight:700;
-  font-size:10vw; line-height:1;
-  color:rgba(201,162,39,.06);
+  font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
+  font-size:8.5vw; line-height:1.2;
+  color:rgba(201,162,39,.07);
   animation:urduFade 1.4s ease both;
 }
 .hero-split-text .eyebrow{ animation:heroFadeUp .7s cubic-bezier(.22,1,.36,1) .15s both; }
