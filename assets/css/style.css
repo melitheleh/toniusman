@@ -460,13 +460,14 @@ body.tup .hero-urdu-bg{ color:rgba(156,43,52,.1); }
 }
 .hero-split-text > *{ position:relative; z-index:1; }
 .hero-split-urdu-bg{
-  position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
-  z-index:0; direction:rtl; pointer-events:none; white-space:nowrap;
-  text-align:center; width:100%;
-  font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
-  font-size:8.5vw; line-height:1.2;
-  color:rgba(201,162,39,.07);
+  position:absolute; top:50%; left:0; transform:translateY(-50%);
+  z-index:0; pointer-events:none;
+  width:100%; height:auto; display:block;
   animation:urduFade 1.4s ease both;
+}
+.hero-split-urdu-bg text{
+  font-family:'Noto Nastaliq Urdu', serif; font-weight:600;
+  fill:rgba(201,162,39,.08); direction:rtl;
 }
 .hero-split-text .eyebrow{ animation:heroFadeUp .7s cubic-bezier(.22,1,.36,1) .15s both; }
 .hero-split-text h1{
